@@ -7,7 +7,7 @@ export default {
         Header
     },
     computed: {
-        isLogged () {
+        isLogging () {
             return true;
         } 
     }

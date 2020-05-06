@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header v-if='isLogged'></Header>
+    <Header v-if='!isLogging'></Header>
     <router-view />
   </div>
 </template>

@@ -5,6 +5,9 @@ export default {
     computed: {
         imageClass() {
             return this.isLeft? "left-image" : "right-image";
+        },
+        imageOrientation() {
+            return this.isLeft ? "left" : "right"
         }
     },
     props: {
