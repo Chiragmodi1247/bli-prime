@@ -19,7 +19,7 @@
         placeholder="Password"
         class="input-bar"
       />
-      <button class="sign-in btn">
+      <button @click="onSubmit" class="sign-in btn">
         Sign-In
       </button>
       <div class="divider">
