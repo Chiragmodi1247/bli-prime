@@ -5,14 +5,18 @@ export default {
     name: 'Login',
     data () {
         return {
-            email: '',
+            userName: '',
             password: ''
         }
     },
     methods: {
         ...mapActions(['login']),
         onSubmit(){
-            this.login(this.email)
+            if(this.userName.length === 0 || this.userName===''){
+                alert('Please Enter a name')
+                return;
+            }
+            this.login(this.userName)
             router.push('Home')
         }
     }

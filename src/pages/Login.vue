@@ -4,12 +4,13 @@
     <div class="form-box">
       <h1>Sign-In</h1>
       <br />
-      <h3>Email:</h3>
+      <h3>Username:</h3>
       <input
         type="text"
-        v-model="email"
-        placeholder="Email..."
+        v-model="userName"
+        placeholder="Username..."
         class="input-bar"
+        @keypress.enter="onSubmit"
       />
       <br />
       <h3>Password:</h3>

@@ -1,15 +1,15 @@
 <template>
   <div class="shows__carousel">
     <Carousel
-      :autoplay=true
-      :loop=true
-      :autoplayTimeout=5000
-      :perPage=1
+      :autoplay="true"
+      :loop="true"
+      :autoplayTimeout="5000"
+      :perPage="1"
       paginationPosition="bottom-overlay"
-      :navigationEnabled=true
+      :navigationEnabled="true"
     >
       <Slide v-for="(img, index) in imgs" :key="index" class="my-slide">
-        <a :href="img.src" target="_blank">
+        <a :href="img.primeLink" target="_blank">
           <img :src="img.src" :alt="img.alt" />
         </a>
       </Slide>

@@ -16,8 +16,8 @@
 
 <style lang="scss" scoped>
 .container {
-  margin-top: 80px;
-  height: calc(100vh - 80px);
+  margin-top: 60px;
+  height: calc(100vh - 60px);
   background-color: #0f171e;
   overflow: auto;
 }
