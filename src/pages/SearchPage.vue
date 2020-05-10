@@ -1,6 +1,10 @@
 <template>
   <main class="search-results">
-    <p class="search-results--count">{{searchedResults.length}} Shows found for "{{this.$route.params.searchTerm}}"</p>
+    <p class="search-results--count">
+      {{ searchedResults.length }} Shows found for "{{
+        this.$route.params.searchTerm
+      }}"
+    </p>
     <div class="search-results--shows">
       <ShowCard
         v-for="(show, index) in searchedResults"
@@ -25,11 +29,11 @@
   background-color: #0f171e;
   overflow: auto;
   color: white;
-  padding: 5vh 5vw 5vh 5vw;
-  &--count{
-      font-size: 1.5em;
-      margin-bottom: 10px;
-      color: #555a5e;
+  padding: 20px 50px 20px 50px;
+  &--count {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #555a5e;
   }
   &--shows {
     display: flex;
