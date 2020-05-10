@@ -3,6 +3,8 @@
     <h1 @click="pushToLandingPage" class="title">Prime Video</h1>
     <div class="form-box">
       <h1>Sign-In</h1>
+      <br>
+      <p class="info">*Just Enter a name and you're good to go</p>
       <br />
       <h3>Username:</h3>
       <input
@@ -46,6 +48,9 @@
   border: 1px solid rgb(196, 196, 196);
   padding: 20px;
   border-radius: 2px;
+  .info{
+    color: rgb(0, 119, 255);
+  }
   .input-bar {
     font-size: 1.5em;
     width: 100%;
