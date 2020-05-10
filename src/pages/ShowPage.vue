@@ -4,8 +4,9 @@
       <div class="main--container--back">
         <div class="back-1">
           <img
-            :src="img"
+            :src="myImgSrc"
             :alt="matchedShow.name"
+            class="img-back"
           />
           <div class="back-2"></div>
           <div class="back-3"></div>
@@ -69,6 +70,9 @@
       width: 70%;
       .back-1 {
         position: relative;
+        .img-back{
+          width: 100%;
+        }
         .back-2 {
           background: linear-gradient(90deg, #0f171e 10%, rgba(15, 23, 30, 0));
           position: absolute;
@@ -105,7 +109,7 @@
       .show-actions {
         display: flex;
         align-items: center;
-        margin-top: 80px;
+        margin-top: 40px;
         .play-action {
           align-items: center;
           display: flex;
@@ -144,7 +148,7 @@
     }
   }
   .recommendations{
-      margin: 700px 20px 20px 20px;
+      margin: 600px 20px 20px 20px;
   }
 }
 button[name="play"] {

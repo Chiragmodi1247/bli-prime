@@ -9,7 +9,7 @@
     <p class="base-image--body">
       {{ bodyTitle }}
     </p>
-    <a class="base-image--button">
+    <a @click="goToLogin" class="base-image--button">
       <span>{{ buttonTitle }}</span>
     </a>
   </div>

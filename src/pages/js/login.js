@@ -18,6 +18,9 @@ export default {
             }
             this.login(this.userName)
             router.push('Home')
+        },
+        pushToLandingPage() {
+            router.push('/')
         }
     }
 }

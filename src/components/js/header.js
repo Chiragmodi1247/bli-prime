@@ -14,17 +14,22 @@ export default {
   computed: {
     ...mapState(["isLogging", "userName", "isLogged", "allShows"]),
     suggestions() {
-      return this.allShows.filter( show => {
-        return show.name.toLowerCase().indexOf(this.searchTerm.toLowerCase()) !== -1
-      })
-    }    
+      return this.allShows.filter((show) => {
+        return (
+          show.name.toLowerCase().indexOf(this.searchTerm.toLowerCase()) !== -1
+        );
+      });
+    },
   },
   watch: {
     $route(to, from) {
       if (from.path === "/Login") this.unsetIsLogging();
       else if (to.path === "/Login") this.logginIn();
-      if (to.name === "SearchPage" || to.name === "LandingPage" || to.name === "ShowPage")
-        this.currentTab = "";
+      if (to.name === "Home") this.currentTab = "Home";
+      else if (to.name === "Kids") this.currentTab = "Kids";
+      else if (to.name === "Movies") this.currentTab = "Movies";
+      else if (to.name === "TVShows") this.currentTab = "TV Shows";
+      else this.currentTab = "";
     },
   },
   methods: {
@@ -49,15 +54,15 @@ export default {
         name: "SearchPage",
         params: { searchTerm: this.searchTerm },
       });
-      this.searchTerm = ''
+      this.searchTerm = "";
     },
     searchedShow(name) {
       router.push({
         name: "SearchPage",
         params: { searchTerm: name },
       });
-      this.searchTerm = ''
-    }
+      this.searchTerm = "";
+    },
   },
   created: function() {
     this.fetchAllShows();

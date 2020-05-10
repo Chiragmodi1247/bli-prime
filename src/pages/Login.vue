@@ -1,6 +1,6 @@
 <template>
   <main class="main">
-    <h1 class="title">Prime Video</h1>
+    <h1 @click="pushToLandingPage" class="title">Prime Video</h1>
     <div class="form-box">
       <h1>Sign-In</h1>
       <br />
@@ -109,6 +109,7 @@
 .title {
   color: black;
   text-align: center;
+  cursor: pointer;
   padding-top: 50px;
 }
 </style>

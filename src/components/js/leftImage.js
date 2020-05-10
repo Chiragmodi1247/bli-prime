@@ -1,3 +1,6 @@
+import router from "../../router";
+import { mapState, mapActions } from "vuex";
+
 console.log("Left image js")
 
 export default {
@@ -30,6 +33,18 @@ export default {
         isLeft: {
             type: Boolean,
             default: true
+        }
+    },
+    methods:{
+        ...mapState(['isLogged']),
+        ...mapActions(["logginIn"]),
+        goToLogin() {
+            if(this.isLogged){
+                router.push("Home");    
+            }else{
+                this.logginIn();
+                router.push("Login");    
+            }
         }
     }
 }
