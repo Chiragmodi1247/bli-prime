@@ -5,7 +5,7 @@
       backgroundImage: `linear-gradient(to ${imageOrientation}, #000 40%, transparent 58%),url(${url})`,
     }"
   >
-    <h1 class="base-image--title">{{ bigTitle }}</h1>
+    <h3 class="base-image--title">{{ bigTitle }}</h3>
     <p class="base-image--body">
       {{ bodyTitle }}
     </p>
@@ -31,6 +31,7 @@
   justify-content: center;
   &--title {
     line-height: 1.2 !important;
+    font-size: 36px;
   }
   &--body {
     margin-top: 24px;

@@ -13,7 +13,7 @@
         </div>
       </div>
       <div class="main--container--details">
-        <h1 class="show-title">{{matchedShow.name}}</h1>
+        <h3 class="show-title">{{matchedShow.name}}</h3>
         <div class="show-imdb">IMDB info here</div>
         <div class="show-desc">
           <p>
